@@ -1,0 +1,21 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "nginx-frontend-service",
+    "labels": {
+      "name": "nginx-service"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "port": 80,
+        "targetPort": 80
+      }
+    ],
+    "selector": {
+      "name": "nginxrep"
+    }
+  }
+}
